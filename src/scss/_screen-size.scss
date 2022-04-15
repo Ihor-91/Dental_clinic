@@ -1,0 +1,29 @@
+.AddressList {
+    &__address {
+        min-width: 350px;
+
+        @include respond-to(xl) {
+            min-width: 310px;
+        }
+
+        @include respond-to(sm) {
+            padding: 10px 12px;
+        }
+
+        p {
+            font-size: $regular;
+
+            @include respond-to(xl) {
+                font-size: $small;
+            }
+
+            @include respond-to(sm) {
+                font-size: $medium;
+            }
+
+            span {
+                margin-left: 5px;
+            }
+        }
+    }
+}
