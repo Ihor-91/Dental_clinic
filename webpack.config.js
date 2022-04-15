@@ -5,13 +5,13 @@ const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const CopyWebpackPlugin = require("copy-webpack-plugin");
 const OptimizeCssAssetWebpackPlugin = require("optimize-css-assets-webpack-plugin");
 const TerserWebpackPlugin = require("terser-webpack-plugin");
-const ImageminPlugin = require("imagemin-webpack");
+const autoprefixer = require("autoprefixer");
 
 const isDev = process.env.NODE_ENV === "development";
 const isProd = !isDev;
 
 const filename = (ext) =>
-  isDev ? `[name].${ext}` : `[name].[contenthash].${ext}`;
+  isProd ? `[name].${ext}` : `[name].[contenthash].${ext}`;
 
 const optimization = () => {
   const configObj = {
@@ -53,32 +53,6 @@ const plugins = () => {
     }),
   ];
 
-  if (isProd) {
-    basePlugins.push(
-      new ImageminPlugin({
-        bail: false,
-        cache: true,
-        imageminOptions: {
-          plugins: [
-            ["gifsicle", { interlaced: true }],
-            ["jpegtran", { progressive: true }],
-            ["optipng", { optimizationLevel: 5 }],
-            [
-              "svgo",
-              {
-                plugins: [
-                  {
-                    removeViewBox: false,
-                  },
-                ],
-              },
-            ],
-          ],
-        },
-      })
-    );
-  }
-
   return basePlugins;
 };
 
@@ -106,7 +80,7 @@ module.exports = {
   module: {
     rules: [
       {
-        test: /\.html/i,
+        test: /\.html$/,
         loader: "html-loader",
         options: {
           esModule: false,
@@ -116,19 +90,28 @@ module.exports = {
         test: /\.css$/i,
         use: [
           {
-            loader: MiniCssExtractPlugin.loader,
+            loader: isDev ? 'style-loader' : MiniCssExtractPlugin.loader,
             options: {
               hmr: isDev,
             },
           },
           "css-loader",
+          {
+            loader: 'postcss-loader',
+            options: {
+              plugins: [
+                autoprefixer()
+              ],
+              sourceMap: true
+            }
+          },
         ],
       },
       {
         test: /\.s[ac]ss$/,
         use: [
           {
-            loader: MiniCssExtractPlugin.loader,
+            loader: isDev ? 'style-loader' : MiniCssExtractPlugin.loader,
           },
           "css-loader",
           "sass-loader",
@@ -143,14 +126,14 @@ module.exports = {
         test: /\.(?:|gif|png|jpg|jpeg|svg)$/,
         type: "asset/resource",
         generator: {
-          filename: "img/[hash][ext][query]",
+          filename: isDev ? "img/[hash][ext][query]" : "img/[name][ext][query]" ,
         },
       },
       {
         test: /\.(?:|woff2)$/,
         type: "asset/resource",
         generator: {
-          filename: "fonts/[hash][ext][query]",
+          filename: isDev ? "fonts/[hash][ext][query]" : "fonts/[name][ext][query]" ,
         },
       },
     ],
