@@ -5,16 +5,45 @@
 @import "settings";
 
 body {
-  background: $primary;
+  background: white;
+  width: 100%;
+  font-family: "gilroy", sans-serif;
+  font-weight: 400;
+  font-size: $extrasmall;
+  line-height: $line-height;
+  color: $primary;
 }
 
-.image-bg {
-  width: 500px;
-  height: 500px;
-  background: url("../img/2.jpeg") no-repeat;
-  background-size: cover;
-  @include respond-to(sm) {
-    width: 100px;
-    height: 100px;
-  }
+.wrapper {
+  margin: 0 auto;
+  max-width: 1400px;
+  padding: 0 55px;
 }
+
+h1{
+  font-family: "gilroy", sans-serif;
+  font-weight: 700;
+  font-size: $veryhude;
+  color: $primary;
+}
+
+h2{
+  font-family: "gilroy", sans-serif;
+  font-weight: 500;
+  font-size: $huge;
+  color: $primary;
+}
+
+h3{
+  font-family: "gilroy", sans-serif;
+  font-weight: 600;
+  font-size: $big;
+  color: $secondary;
+}
+
+button{
+  border-radius: $borderRadius;
+  box-shadow: $boxShadow;
+  transition: $transition;
+  border: $border;
+

@@ -1,16 +1,30 @@
 // font size
-$regular: 16px;
-$extraLarge: 20px;
-$large: 18px;
-$medium: 14px;
-$small: 12px;
-$extraSmall: 10px;
+$veryhude: 58px;
+$huge: 42px;
+$extralarge: 36px;
+$big: 28px;
+$regular: 24px;
+$medium: 22px;
+$small: 20px;
+$extrasmall: 18px;
+$verysmal: 16px;
+$tiny: 14px;
+
+$line-height: 140%;
 
 // colors
-$primary: #b6509e;
-$secondary: #2ebac6;
+$primary: #474551;
+$secondary: #099DBA;
+$dark_blue: #046DBF;
+$blue: #33D9DA;
+$turquoise: #BDF8F9;
+$light: #F3FEFE;
+$white: #FFFFFF;
+
+
 
 // different
-$borderRadius: 2px;
-$boxShadow: 0 1px 3px 0 rgba(0, 0, 0, 0.16);
+$borderRadius: 30px;
+$boxShadow: 0px 15px 20px rgba(0, 0, 0, 0.05);
 $transition: all 0.2s ease;
+$border: 2px solid #099DBA; 
