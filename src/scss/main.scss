@@ -4,6 +4,7 @@
 @import "vars";
 @import "settings";
 
+
 body {
   background: white;
   width: 100%;
@@ -16,35 +17,392 @@ body {
 
 .wrapper {
   margin: 0 auto;
-  max-width: 1400px;
-  padding: 0 55px;
+  max-width: 1290px;
+
+  @include respond-to(lg) {
+    padding: 0 20px;
+  }
 }
 
-h1{
-  font-family: "gilroy", sans-serif;
+h1 {
   font-weight: 700;
   font-size: $veryhude;
   color: $primary;
 }
 
-h2{
-  font-family: "gilroy", sans-serif;
+h2 {
   font-weight: 500;
   font-size: $huge;
   color: $primary;
 }
 
-h3{
-  font-family: "gilroy", sans-serif;
+h3 {
   font-weight: 600;
   font-size: $big;
   color: $secondary;
 }
 
-button{
+h4 {
+  font: $extrasmall;
+  line-height: 22px;
+  font-weight: 500;
+  color: $secondary;
+}
+
+button {
   border-radius: $borderRadius;
   box-shadow: $boxShadow;
   transition: $transition;
   border: $border;
 }
 
+// HEADER
+
+.header__wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 160px;
+
+  @include respond-to(lg) {
+    height: 130px;
+  }
+
+  .header__title {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    @include respond-to(sm) {
+      flex-direction: column;
+      align-items: flex-start
+    }
+
+    &:hover {
+      opacity: 0.7;
+    }
+
+    .logo {
+      width: 95px;
+      height: 94px;
+
+      @include respond-to(lg) {
+        width: 73.15px;
+        height: 72.38px;
+      }
+
+      @include respond-to(md) {
+        width: 63.67px;
+        height: 63px;
+      }
+    }
+
+    .title {
+      width: 190px;
+      font-weight: 700;
+      font-size: $small;
+      color: $secondary;
+      line-height: 120%;
+      margin-left: 19.22px;
+
+      @include respond-to(lg) {
+        width: 153px;
+        font-size: $verysmal;
+        margin-left: 15px;
+      }
+
+      @include respond-to(sm) {
+        font-size: $extrasmall;
+        margin-top: 5px;
+        line-height: 21.6px;
+      }
+    }
+  }
+
+  .header__address {
+    width: 190px;
+    height: 66px;
+
+    @include respond-to(sm) {
+      display: none;
+    }
+
+    a {
+      display: flex;
+
+      &:hover {
+        opacity: 0.7;
+      }
+
+      img {
+        margin-right: 7.73px;
+      }
+    }
+
+    p {
+      font-weight: 600;
+      font-size: $tiny;
+      line-height: 17px;
+      margin-top: 10px;
+    }
+  }
+
+  .header__hours {
+    width: 160px;
+    height: 76px;
+    margin-right: 166px;
+
+    @include respond-to(lg) {
+      margin-right: 0;
+    }
+
+    @include respond-to(md) {
+      display: none;
+    }
+
+    .hours__block {
+      display: flex;
+
+      img {
+        margin-right: 8px;
+      }
+    }
+
+    p {
+      font-weight: 400;
+      font-size: $tiny;
+      line-height: 17px;
+      margin-top: 10px;
+    }
+  }
+
+  .header__nav {
+    display: flex;
+
+    @include respond-to(md) {
+      margin-left: 110px;
+    }
+
+    @include respond-to(sm) {
+      margin: 0;
+    }
+
+    .header__contacts {
+      display: flex;
+      margin-left: 11px;
+
+      @include respond-to(sm) {
+        display: none;
+      }
+
+      .header__messenger {
+        display: flex;
+        justify-content: space-between;
+        width: 65px;
+        height: 28px;
+        margin-right: 60px;
+
+        @include respond-to(lg) {
+          width: 76px;
+          height: 29px;
+          margin-right: 20px;
+        }
+
+        @include respond-to(md) {
+          flex-direction: column;
+          height: 74px;
+          width: 28px;
+        }
+
+        .telegram {
+          &:hover {
+            opacity: 0.7;
+          }
+        }
+
+        .whatsapp {
+          &:hover {
+            opacity: 0.7;
+          }
+        }
+      }
+
+      .header__tel {
+        width: 178px;
+        height: 56px;
+
+        @include respond-to(lg) {
+          width: 160px;
+          height: 50px;
+        }
+
+        @include respond-to(md) {
+          display: none;
+        }
+
+        p {
+          font-weight: 600;
+          font-size: $small;
+          line-height: 140%;
+
+          @include respond-to(lg) {
+            font-size: $extrasmall;
+          }
+
+          &:first-of-type {
+            letter-spacing: 0.5px;
+          }
+        }
+
+        .call__back {
+          width: 100%;
+          font-weight: 700;
+          font-size: $tiny;
+          line-height: 17px;
+          border: none;
+          background: transparent;
+          color: $secondary;
+          box-shadow: none;
+          display: flex;
+          justify-content: end;
+          padding-right: 11px;
+          margin-top: 2px;
+          cursor: pointer;
+
+          &:hover {
+            opacity: 0.7;
+          }
+
+          @include respond-to(lg) {
+            margin-top: 10px;
+          }
+        }
+      }
+
+    }
+
+    .header__menu {
+      display: none;
+
+      @include respond-to(lg) {
+        display: block;
+      }
+
+      .burger {
+        width: 60px;
+        height: 60px;
+        box-shadow: 0px 15px 20px rgba(0, 0, 0, 0.05);
+        border-radius: 20px;
+        background-color: $white;
+        border: none;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding: 0 10px;
+        position: relative;
+        z-index: 10;
+
+        &::before,
+        &::after {
+          content: "";
+          position: absolute;
+          width: 40px;
+          height: 6px;
+          border-radius: 6px;
+          background: $secondary;
+          z-index: 10;
+        }
+
+        &::before {
+          top: 15px;
+
+        }
+
+        &::after {
+          bottom: 15px;
+          width: 33.33px;
+        }
+
+        &:hover {
+          opacity: 0.70;
+        }
+
+        i {
+          width: 40px;
+          height: 6px;
+          background: $secondary;
+          border-radius: 6px;
+        }
+      }
+
+      .header__list {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        background-color: $primary;
+        position: absolute;
+        top: -700px;
+        right: -300px;
+        width: 300px;
+        height: 700px;
+        padding-top: 60px;
+        transition: all 0.5s ease 0s;
+
+        @include respond-to(sm) {
+          width: 100%;
+          height: 100%;
+        }
+
+        .header__item {
+          margin: 40px auto 0;
+
+          .header__link {
+            font-weight: 500;
+            font-size: $extrasmall;
+            line-height: 22px;
+            color: $secondary;
+
+            &:hover {
+              opacity: 0.7;
+            }
+          }
+        }
+      }
+    }
+
+    .headerMenu-visible {
+      .burger {
+        position: relative;
+
+        &::before,
+        &::after {
+          position: absolute;
+          top: 27px;
+        }
+
+        &::before {
+          transform: rotate(45deg);
+        }
+
+        &::after {
+          transform: rotate(-45deg);
+          width: 40px;
+        }
+
+        i {
+          display: none;
+        }
+      }
+
+      .header__list {
+        right: 0;
+        top: 0;
+      }
+    }
+  }
+}
+
+.top {
+  background-image: url(../img/BgTop.png);
+  height: 700px;
+}
