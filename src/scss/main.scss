@@ -7,11 +7,10 @@
 
 body {
   background: white;
-  width: 100%;
+  max-width: 100%;
   font-family: "gilroy", sans-serif;
   font-weight: 400;
   font-size: $extrasmall;
-  line-height: $line-height;
   color: $primary;
 }
 
@@ -28,6 +27,18 @@ h1 {
   font-weight: 700;
   font-size: $veryhude;
   color: $primary;
+
+  @include respond-to(lg) {
+    font-size: $extralarge;
+  }
+
+  @include respond-to(md) {
+    font-size: 32px;
+  }
+
+  @include respond-to(sm) {
+    font-size: $small;
+  }
 }
 
 h2 {
@@ -47,6 +58,11 @@ h4 {
   line-height: 22px;
   font-weight: 500;
   color: $secondary;
+
+}
+
+p {
+  line-height: $line-height;
 }
 
 button {
@@ -347,14 +363,20 @@ button {
         height: 700px;
         padding-top: 60px;
         transition: all 0.5s ease 0s;
+        z-index: 5;
 
         @include respond-to(sm) {
           width: 100%;
-          height: 100%;
+          height: 655px;
+
         }
 
         .header__item {
           margin: 40px auto 0;
+
+          // @include respond-to(sm) {
+          //   margin-top: 30px;
+          // }
 
           .header__link {
             font-weight: 500;
@@ -402,7 +424,240 @@ button {
   }
 }
 
+// MAIN
+
+// top
 .top {
-  background-image: url(../img/BgTop.png);
+  width: 100%;
   height: 700px;
+  background-image: url(../img/BgTop.png);
+  background-position: 0 0;
+  background-size: 100% 100%;
+  padding-top: 92px;
+  position: relative;
+
+  @include respond-to(lg) {
+    height: 374px;
+    padding-top: 60px;
+  }
+
+  @include respond-to(md) {
+    height: 440px;
+    padding-top: 30px;
+  }
+
+  @include respond-to(sm) {
+    height: 440px;
+    padding-top: 20px;
+    background-image: url(../img/BgTopSm.png);
+  
+  }
+
+  .top__title {
+    line-height: 120%;
+    width: 926px;
+    margin-bottom: 30px;
+
+    @include respond-to(lg) {
+      width: 628px;
+    }
+
+    @include respond-to(md) {
+      width: 527px;
+      margin-bottom: 40px;
+    }
+
+    @include respond-to(sm) {
+      width: 277px;
+      margin-bottom: 20px;
+    }
+  }
+
+  .top__text {
+    font-size: $big;
+    font-weight: 600;
+    color: $secondary;
+    width: 630px;
+
+    @include respond-to(lg) {
+      font-size: $regular;
+      width: 501px;
+    }
+
+    @include respond-to(sm) {
+      font-size: $verysmal;
+      width: 267px;
+    }
+  }
+
+  .top__enroll {
+    width: 456px;
+    height: 68px;
+
+    @include respond-to(lg) {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-end;
+      margin-top: 30px;
+      width: 692px;
+    }
+
+    @include respond-to(md) {
+      flex-direction: column;
+      align-items: flex-start;
+      height: 126px;
+      width: 501px;
+    }
+    @include respond-to(sm) {
+      width: 100%;
+      margin-top: 20px;
+    }
+
+    .enroll__text {
+      font-size: $regular;
+      margin: 60px 0;
+
+      @include respond-to(lg) {
+        width: 456px;
+        margin: 0;
+      }
+
+      @include respond-to(md) {
+        margin-bottom: 18px;
+      }
+
+      @include respond-to(sm) {
+        width: 267px;
+        font-size: $verysmal;
+        margin-bottom: 30px;
+      }
+
+      span {
+        color: $blue;
+      }
+    }
+
+    .enroll__btn {
+      width: 190px;
+      height: 40px;
+      background: $dark_blue;
+      border: none;
+      color: $white;
+      font-weight: 600;
+
+      &:hover {
+        opacity: 0.75;
+      }
+
+      @include respond-to(md) {
+        margin-left: 269px;
+      }
+
+      @include respond-to(sm) {
+        margin: 0 auto 40px;
+      }
+    }
+  }
+
+  .top__card {
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    left: 0;
+    top: 182px;
+
+    @include respond-to(lg) {
+      top: 20px;
+    }
+
+    @include respond-to(md) {
+      top: 36px;
+    }
+
+    @include respond-to(sm) {
+      flex-direction: column;
+      align-items: center;
+      margin-top: 0;
+    }
+
+
+    .card__item {
+      width: 409px;
+      height: 150px;
+      background: $light;
+      border-radius: $borderRadius;
+      box-shadow: $boxShadow;
+      display: flex;
+      align-items: center;
+
+      @include respond-to(lg) {
+        flex-direction: column;
+        height: 240px;
+        width: 300px;
+      }
+
+      @include respond-to(md) {
+        width:230px;
+        height: 300px;
+        padding: 0 19px;
+      }
+
+      @include respond-to(sm) {
+        margin-top: 20px;
+      }
+
+      .card__img {
+        width: 63px;
+        height: 63px;
+        margin: 0 30px 0 19px;
+
+        @include respond-to(lg) {
+          margin: 35px auto 14px;
+        }
+
+        @include respond-to(md) {
+          margin: 30px auto;
+        }
+      }
+
+      .card__info {
+
+        @include respond-to(lg) {
+          text-align: center;
+        }
+
+        .card__info__title {
+          font-size: $small;
+          color: $secondary;
+          font-weight: 600;
+          margin-bottom: 10px;
+
+          @include respond-to(lg) {
+            font-size: $medium;
+            margin-bottom: 20px;
+          }
+
+          @include respond-to(md) {
+            margin-bottom: 60px;
+            font-size: $extrasmall;
+          }
+        }
+
+        .card__info__text {
+          @include respond-to(md) {
+            font-size: $verysmal;
+          }
+        }
+      }
+
+      &:nth-of-type(3) {
+        .card__info__title {
+          @include respond-to(md) {
+            width: 158px;
+            margin: 0 auto 35px;
+          }
+        }
+      }
+    }
+  }
 }
