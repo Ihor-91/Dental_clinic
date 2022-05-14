@@ -1,5 +1,8 @@
 import $ from "jquery";
 
+import "slick-slider";
+import "jquery-modal";
+
 import "../scss/main.scss";
 import "../index.html";
 
@@ -23,3 +26,25 @@ function burgerMenu(selector) {
 }
 
 burgerMenu(".header__menu");
+
+// slider
+$(".stock__slider").slick({
+  dots: true,
+  slidesToShow: 3,
+  responsive: [
+    {
+      breakpoint: 1023,
+      settings: {
+        slidesToShow: 2,
+      },
+    },
+    {
+      breakpoint: 767,
+      settings: {
+        slidesToShow: 1,
+      },
+    },
+  ],
+});
+
+// modal

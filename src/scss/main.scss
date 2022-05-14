@@ -46,11 +46,11 @@ h2 {
   font-size: $huge;
   color: $primary;
 
-  @include respond-to(lg){
+  @include respond-to(lg) {
     font-size: $extralarge;
   }
 
-  @include respond-to(sm){
+  @include respond-to(sm) {
     font-size: $small;
   }
 }
@@ -66,7 +66,6 @@ h4 {
   line-height: 22px;
   font-weight: 500;
   color: $secondary;
-
 }
 
 p {
@@ -81,7 +80,29 @@ button {
   font-weight: 600;
   line-height: 25px;
   font-size: $small;
+  width: 181.77px;
+  height: 40.39px;
+  color: $secondary;
+  background-color: $backgroundBtn;
   cursor: pointer;
+
+  &:hover {
+    opacity: 0.75;
+  }
+}
+
+.desc {
+  font-size: $big;
+  font-weight: 600;
+  color: $secondary;
+
+  @include respond-to(lg) {
+    font-size: $regular;
+  }
+
+  @include respond-to(sm) {
+    font-size: $verysmal;
+  }
 }
 
 // HEADER
@@ -277,7 +298,7 @@ button {
             font-size: $extrasmall;
           }
 
-          &:hover{
+          &:hover {
             opacity: 0.75;
           }
 
@@ -444,7 +465,7 @@ button {
   height: 700px;
   background-image: url(../img/BgTop.png);
   background-position: 0 0;
-  background-size: cover;
+  background-size: 100% 100%;
   padding-top: 92px;
   position: relative;
 
@@ -462,7 +483,7 @@ button {
     height: 440px;
     padding-top: 20px;
     background-image: url(../img/BgTopSm.png);
-  
+
   }
 
   .top__title {
@@ -485,19 +506,14 @@ button {
     }
   }
 
-  .top__text {
-    font-size: $big;
-    font-weight: 600;
-    color: $secondary;
+  .top__desc {
     width: 630px;
 
     @include respond-to(lg) {
-      font-size: $regular;
       width: 501px;
     }
 
     @include respond-to(sm) {
-      font-size: $verysmal;
       width: 267px;
     }
   }
@@ -520,6 +536,7 @@ button {
       height: 126px;
       width: 501px;
     }
+
     @include respond-to(sm) {
       width: 100%;
       margin-top: 20px;
@@ -610,7 +627,7 @@ button {
       }
 
       @include respond-to(md) {
-        width:230px;
+        width: 230px;
         height: 300px;
         padding: 0 19px;
       }
@@ -676,109 +693,102 @@ button {
 }
 
 // consultation
-
-.consultation{
-  height: 701px;
+.consultation {
   margin-top: 228px;
   text-align: center;
 
-  @include respond-to(lg){
+  @include respond-to(lg) {
     margin-top: 318px;
   }
 
-  @include respond-to(md){
+  @include respond-to(md) {
     margin-top: 356px;
   }
 
-  @include respond-to(sm){
+  @include respond-to(sm) {
     margin-top: 954px;
   }
 
-  .consultation__title{
-    @include respond-to(sm){
+  .consultation__title {
+
+    @include respond-to(sm) {
       width: 280px;
       margin: 0 auto;
     }
   }
 
-  .consultation__text{
-    font-size: $big;
-    font-weight: 600;
-    color: $secondary;
+  .consultation__desc {
     margin-top: 30px;
 
-    @include respond-to(lg){
-      font-size: $regular;
+    @include respond-to(lg) {
       margin: 30px auto 0;
-      
     }
-  
-    @include respond-to(sm){
-      font-size: $verysmal;
+
+    @include respond-to(sm) {
       margin-top: 20px;
       width: 280px;
     }
-
   }
 
-  .consultation__card{
+  .consultation__card {
     display: flex;
     justify-content: space-between;
     margin-top: 60px;
 
-    @include respond-to(sm){
+    @include respond-to(sm) {
       flex-direction: column;
       align-items: center;
     }
 
-    .consultation__card__item{
+    .consultation__card__item {
       width: 410px;
 
-      @include respond-to(lg){
+      @include respond-to(lg) {
         width: 300px;
       }
 
-      @include respond-to(md){
+      @include respond-to(md) {
         width: 230px;
       }
 
-      .card__item__img{
+      .card__item__img {
         height: auto;
 
-        @include respond-to(lg){
+        @include respond-to(lg) {
           height: 200px;
         }
       }
 
-      .card__item__title{
+      .card__item__title {
         font-size: $regular;
         font-weight: 600;
         margin-top: 20px;
 
-        @include respond-to(lg){
+        @include respond-to(lg) {
           font-size: $small;
           margin-top: 30px;
         }
 
-        @include respond-to(md){
+        @include respond-to(md) {
           font-size: $extrasmall;
         }
       }
 
-      .card__title__text{
+      .card__title__text {
         margin-top: 10px;
 
-        @include respond-to(lg){
+        @include respond-to(lg) {
           margin-top: 30px;
         }
 
-        @include respond-to(md){
+        @include respond-to(md) {
           margin-top: 20px;
         }
       }
     }
   }
-  .consultation__button{
+
+  .consultation__button {
     width: 484px;
     height: 60px;
     background: $dark_blue;
@@ -787,11 +797,174 @@ button {
     font-size: $regular;
     line-height: 29px;
 
-    @include respond-to(sm){
+    @include respond-to(sm) {
       width: 280px;
       margin-top: 60px;
     }
   }
+}
+
+// stock
+.stock {
+  margin-top: 90px;
+  text-align: center;
+
+  @include respond-to(sm) {
+    margin-top: 60px;
+  }
+
+  .stock__desc {
+    margin: 30px auto 0;
+    width: 1066px;
+
+    @include respond-to(lg) {
+      width: 983px;
+    }
+
+    @include respond-to(md) {
+      width: 728px;
+    }
+
+    @include respond-to(sm) {
+      margin-top: 20px;
+      width: 280px;
+    }
 
 
+    span {
+      color: $dark_blue;
+    }
+  }
+
+  .stock__slider {
+    margin-top: 29px;
+    position: relative;
+
+    @include respond-to(lg) {
+      margin-top: 60px;
+    }
+
+    @include respond-to(sm) {
+      margin-top: 30px;
+    }
+
+    .stock__slider__item {
+      position: relative;
+
+      img {
+        width: 100%;
+      }
+
+      .slider__btn {
+        position: absolute;
+        bottom: 20px;
+        left: 50%;
+        margin-left: -90.5px;
+      }
+    }
+
+    // slick-slider
+    &.slick-slider {
+
+      .slick-arrow {
+        width: 40px;
+        height: 40px;
+        position: absolute;
+        top: 42%;
+        margin-top: -20px;
+        z-index: 10;
+        font-size: 0;
+        background-repeat: no-repeat;
+        background-position: center;
+        border: none;
+        background-color: $light;
+
+        &.slick-prev {
+          left: -50px;
+          background-image: url(../img/ArrowPrev.svg);
+
+          @include respond-to(lg) {
+            left: -20px;
+          }
+
+          @include respond-to(sm) {
+            left: -10px
+          }
+        }
+
+        &.slick-next {
+          right: -50px;
+          background-image: url(../img/ArrowNext.svg);
+
+          @include respond-to(lg) {
+            right: -20px;
+          }
+
+          @include respond-to(sm) {
+            right: -10px;
+          }
+        }
+      }
+
+      .slick-list {
+        overflow: hidden;
+        margin: 0 -15px;
+
+        @include respond-to(lg) {
+          margin: 0 -20.5px;
+        }
+
+        @include respond-to(md) {
+          margin: 0 -10px;
+        }
+
+        .slick-track {
+          display: flex;
+
+          .slick-slide {
+            padding: 0 15px;
+
+            @include respond-to(lg) {
+              padding: 0 20.5px;
+            }
+
+            @include respond-to(md) {
+              padding: 0 10px;
+            }
+          }
+        }
+      }
+
+      .slick-dots {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        li {
+          margin: 33px 10px 0;
+
+          @include respond-to(sm) {
+            margin-top: 23px;
+          }
+
+          button {
+            width: 18px;
+            height: 18px;
+            background-color: $turquoise;
+            font-size: 0;
+            border: none;
+          }
+        }
+
+        .slick-active {
+
+          button {
+            width: 24px;
+            height: 24px;
+            background-color: $blue;
+          }
+        }
+      }
+    }
+  }
 }
