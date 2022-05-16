@@ -59,6 +59,10 @@ h3 {
   font-weight: 600;
   font-size: $big;
   color: $secondary;
+
+  @include respond-to(sm){
+    font-size: $small;
+  }
 }
 
 h4 {
@@ -95,6 +99,8 @@ button {
   font-size: $big;
   font-weight: 600;
   color: $secondary;
+  margin: 30px auto 0;
+  max-width: 1066px;
 
   @include respond-to(lg) {
     font-size: $regular;
@@ -102,6 +108,24 @@ button {
 
   @include respond-to(sm) {
     font-size: $verysmal;
+  }
+}
+
+.messenger {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 28px;
+
+  .messenger__link {
+    display: inline-block;
+    margin-right: 9px;
+    width: 28px;
+    height: 28px;
+  }
+
+  .messenger__text {
+    margin-left: 21px;
   }
 }
 
@@ -753,6 +777,7 @@ button {
 
       .card__item__img {
         height: auto;
+        border-radius: 20px;
 
         @include respond-to(lg) {
           height: 200px;
@@ -962,6 +987,483 @@ button {
             width: 24px;
             height: 24px;
             background-color: $blue;
+          }
+        }
+      }
+    }
+  }
+}
+
+// services
+.services {
+  margin-top: 93px;
+  text-align: center;
+
+  .services__desc {
+    span {
+      color: $dark_blue;
+    }
+  }
+
+  .services__block {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 44px -15px 0;
+
+    @include respond-to(lg) {
+      display: flex;
+      justify-content: center;
+    }
+
+    .services__block__item {
+      width: 630px;
+      height: 560px;
+      background-color: $light;
+      border-radius: 20px;
+      margin: 15px;
+      text-align: initial;
+      padding-left: 30px;
+      position: relative;
+
+      @include respond-to(lg) {
+        width: 100%;
+      }
+
+      @include respond-to(sm) {
+        width: 280px;
+        height: 740px;
+      }
+
+      .services__img {
+        display: block;
+        width: 253px;
+        height: 385px;
+        position: absolute;
+        top: 27px;
+        right: 0;
+
+        @include respond-to(md) {
+          width: 240px;
+          height: 240px;
+          top: 140px;
+          right: 35px;
+        }
+
+        @include respond-to(sm) {
+          width: 100px;
+          height: 100px;
+          top: -22px;
+          right: 0;
+        }
+      }
+
+      .services__block__title {
+        margin-top: 60px;
+
+        @include respond-to(lg) {
+          margin-top: 30px;
+        }
+
+        @include respond-to(md) {
+          margin-top: 60px;
+        }
+
+        @include respond-to(sm) {
+          margin-top: 30px;
+        }
+      }
+
+      .services__block__text {
+        display: block;
+        max-width: 366px;
+        margin-top: 9px;
+        height: 120px;
+        z-index: 12;
+
+        @include respond-to(lg) {
+          max-width: 526px;
+          height: 116px;
+          margin-top: 20px;
+        }
+
+        @include respond-to(md) {
+          max-width: 376px;
+          height: 126px;
+          margin-top: 30px;
+        }
+
+        @include respond-to(sm) {
+          max-width: 220px;
+          height: 193px;
+          margin-top: 20px;
+        }
+      }
+
+      .service__list {
+        list-style: disc;
+        margin-left: 31px;
+        font-size: $medium;
+        font-weight: 600;
+        max-width: 391px;
+        height: 200px;
+        line-height: 140%;
+
+        @include respond-to(lg) {
+          max-width: 477px;
+          height: 85px;
+        }
+
+        @include respond-to(md) {
+          max-width: 472px;
+          height: 85px;
+          margin-top: 8px;
+        }
+
+        @include respond-to(sm) {
+          max-width: 220px;
+          height: 256px;
+          margin-top: 40px;
+          font-size: $extrasmall;
+        }
+      }
+
+      .services__messenger {
+
+        @include respond-to(lg) {
+          margin-top: 101px;
+        }
+
+        @include respond-to(md) {
+          margin-top: 93px;
+        }
+
+        @include respond-to(sm) {
+          display: none;
+        }
+      }
+
+      .services__btn {
+        margin-top: 34px;
+        text-align: center;
+
+        @include respond-to(lg) {
+          margin-top: 21px;
+        }
+
+        @include respond-to(sm) {
+          flex-direction: column;
+          margin-left: -30px;
+        }
+
+        .services__btn__item {
+          margin: 0 15px;
+
+          @include respond-to(sm) {
+            margin-bottom: 30px;
+          }
+        }
+
+        .services__btn__item-prices {
+          background-color: $turquoise;
+        }
+      }
+    }
+  }
+
+  .services__technology {
+    height: 641px;
+    background-color: $light;
+    padding: 60px 70px 0;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    border-radius: 20px 20px 0 0;
+    margin: 0 auto;
+
+    @include respond-to(lg) {
+      flex-direction: column;
+      justify-content: normal;
+      flex-wrap: nowrap;
+      height: 1115px;
+    }
+
+    @include respond-to(md) {
+      height: 1040px;
+      padding: 60px 0 0;
+    }
+
+    @include respond-to(sm){
+      max-width: 280px;
+      height: 989px;
+      padding-top: 30px;
+    }
+
+    .services__technology__col1 {
+      max-width: 550px;
+      text-align: start;
+      position: relative;
+
+      @include respond-to(lg) {
+        max-width: 100%;
+        text-align: center;
+      }
+
+      @include respond-to(md) {
+        max-width: 685px;
+        margin: 0 auto;
+      }
+
+      .services__technology__title{
+        
+        @include respond-to(sm){
+          width: 209px;
+          margin: 0 auto;
+
+        }
+
+        span{
+          color: $dark_blue;
+        }
+      }
+
+      .services__technology__video {
+        margin-top: 9px;
+
+        @include respond-to(lg) {
+          max-width: 550px;
+          margin: 30px auto 0;
+        }
+
+        @include respond-to(sm){
+          width: 280px;
+        }
+
+        .video__desc {
+          color: $blue;
+          margin-top: 60px;
+
+          @include respond-to(lg) {
+            text-align: start;
+          }
+
+          @include respond-to(md) {
+            margin-top: 30px;
+          }
+
+          @include respond-to(sm){
+            font-size: $tiny;
+          }
+        }
+
+        .video__btn {
+          width: 110px;
+          height: 110px;
+          border-radius: 50%;
+          background-color: $white;
+          font-size: 0;
+          border: none;
+          background-image: url(../img/play.svg);
+          background-repeat: no-repeat;
+          background-position: 40px 35px;
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          margin-top: -40px;
+          margin-left: -55px;
+
+          @include respond-to(lg){
+            margin-top: 10px;
+          }
+
+          @include respond-to(md){
+            margin-top: 10px;
+          }
+
+          @include respond-to(sm){
+            width: 56px;
+            height: 56px;
+            background-position: 23px 18px;
+            background-image: url(../img/play_md.svg);
+            margin-top: 44px;
+            margin-left: -26px;
+          }
+        }
+      }
+    }
+
+    .services__technology__col2 {
+      max-width: 530px;
+      margin-left: 60px;
+      text-align: start;
+
+      @include respond-to(lg) {
+        max-width: 750px;
+        height: 399px;
+        margin: 60px auto 0;
+      }
+
+      @include respond-to(sm){
+        max-width: 280px;
+        margin: 30px 0 0 30px;
+        height: 516px;
+      }
+
+      .services__technology__list {
+        list-style: disc;
+        font-size: $medium;
+        font-weight: 500;
+        line-height: 140%;
+
+        @include respond-to(md) {
+          font-size: $small;
+        }
+
+        @include respond-to(sm) {
+          font-size: $verysmal;
+        }
+
+        .services__technology__item {
+          margin-bottom: 15px;
+        }
+      }
+    }
+    .services__technology__btn {
+      margin-top: -75px;
+      width: 190px;
+      height: 40px;
+
+      @include respond-to(lg) {
+        width: 190px;
+        height: 53.55px;
+        margin: 60px auto 0;
+      }
+
+      @include respond-to(md){
+        margin-top: 15px;
+      }
+    }
+  }
+}
+
+// modal
+.modal {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  top: 0;
+  left: 0;
+  z-index: 100;
+  display: none;
+
+  &.participate__modal-open {
+    display: block;
+  }
+
+  .modal__body {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-top: -200px;
+    margin-left: -240px;
+
+    @include respond-to(sm) {
+      margin-left: -150px;
+    }
+
+    .modal__content {
+      max-width: 480px;
+      height: 400px;
+      background-color: $turquoise;
+      text-align: center;
+      margin: 0 auto;
+
+
+      @include respond-to(sm) {
+        width: 300px;
+        height: 300px;
+
+
+      }
+
+      .modal__close {
+        display: inline-block;
+        width: 38px;
+        height: 38px;
+        border-radius: 50%;
+        position: relative;
+        background-color: $white;
+        top: 12px;
+        left: 175px;
+
+        @include respond-to(sm) {
+          left: 120px;
+        }
+
+        &::before,
+        &::after {
+          content: "";
+          position: absolute;
+          top: 18px;
+          right: 4px;
+          width: 30px;
+          height: 2px;
+          background-color: #474551;
+          z-index: 10;
+        }
+
+        &::before {
+          transform: rotate(45deg);
+        }
+
+        &::after {
+          transform: rotate(-45deg);
+        }
+      }
+
+      .modal__title {
+        padding: 0 30px;
+        margin: 10px auto 0;
+
+        @include respond-to(sm) {
+          font-size: $extrasmall;
+        }
+      }
+
+      .modal__btn {
+        width: 334px;
+        height: 40px;
+        background-color: transparent;
+        font-size: $small;
+        background-image: url(../img/VK.svg);
+        background-repeat: no-repeat;
+        background-size: 28px 28px;
+        background-position: top 4px left 32px;
+        margin-top: 60px;
+
+        @include respond-to(sm) {
+          width: 250px;
+          font-size: $extrasmall;
+          background-position: top 4px left 14px;
+          margin-top: 30px;
+        }
+      }
+
+
+      .modal__messenger {
+        padding: 0 85px;
+        margin: 30px auto 0;
+
+        @include respond-to(sm) {
+          padding: 0 30px;
+        }
+
+        .modal__messenger__text {
+
+
+          @include respond-to(sm) {
+            font-size: $tiny;
+            margin-left: 0;
           }
         }
       }

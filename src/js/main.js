@@ -48,3 +48,11 @@ $(".stock__slider").slick({
 });
 
 // modal
+
+$(".slider__btn").on("click", function () {
+  $(".participate__modal").addClass("participate__modal-open");
+});
+
+$(".modal__close").on("click", function () {
+  $(".participate__modal").removeClass("participate__modal-open");
+});
