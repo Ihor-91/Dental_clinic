@@ -1346,18 +1346,15 @@ button {
 }
 
 // modal
-.modal {
-  position: fixed;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.7);
-  top: 0;
-  left: 0;
+.blocker {
   z-index: 100;
-  display: none;
+}
 
-  &.participate__modal-open {
-    display: block;
+.modal {
+  background-color: rgba(0, 0, 0, 0.7);
+
+  a.close-modal {
+    display: none;
   }
 
   .modal__body {
