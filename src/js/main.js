@@ -46,3 +46,5 @@ $(".stock__slider").slick({
     },
   ],
 });
+
+// modalVideo

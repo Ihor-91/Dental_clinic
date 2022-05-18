@@ -60,7 +60,7 @@ h3 {
   font-size: $big;
   color: $secondary;
 
-  @include respond-to(sm){
+  @include respond-to(sm) {
     font-size: $small;
   }
 }
@@ -76,7 +76,8 @@ p {
   line-height: $line-height;
 }
 
-button {
+button,
+.btn {
   border-radius: $borderRadius;
   box-shadow: $boxShadow;
   transition: $transition;
@@ -93,6 +94,12 @@ button {
   &:hover {
     opacity: 0.75;
   }
+}
+
+.btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .desc {
@@ -488,8 +495,8 @@ button {
   width: 100%;
   height: 700px;
   background-image: url(../img/BgTop.png);
-  background-position: 0 0;
-  background-size: 100% 100%;
+  background-position: center;
+  background-size: cover;
   padding-top: 92px;
   position: relative;
 
@@ -532,6 +539,7 @@ button {
 
   .top__desc {
     width: 630px;
+    margin-left: 0;
 
     @include respond-to(lg) {
       width: 501px;
@@ -1144,7 +1152,8 @@ button {
 
       .services__btn {
         margin-top: 34px;
-        text-align: center;
+        display: flex;
+        justify-content: center;
 
         @include respond-to(lg) {
           margin-top: 21px;
@@ -1153,6 +1162,7 @@ button {
         @include respond-to(sm) {
           flex-direction: column;
           margin-left: -30px;
+          align-items: center;
         }
 
         .services__btn__item {
@@ -1192,7 +1202,7 @@ button {
       padding: 60px 0 0;
     }
 
-    @include respond-to(sm){
+    @include respond-to(sm) {
       max-width: 280px;
       height: 989px;
       padding-top: 30px;
@@ -1213,15 +1223,15 @@ button {
         margin: 0 auto;
       }
 
-      .services__technology__title{
-        
-        @include respond-to(sm){
+      .services__technology__title {
+
+        @include respond-to(sm) {
           width: 209px;
           margin: 0 auto;
 
         }
 
-        span{
+        span {
           color: $dark_blue;
         }
       }
@@ -1234,7 +1244,7 @@ button {
           margin: 30px auto 0;
         }
 
-        @include respond-to(sm){
+        @include respond-to(sm) {
           width: 280px;
         }
 
@@ -1250,7 +1260,7 @@ button {
             margin-top: 30px;
           }
 
-          @include respond-to(sm){
+          @include respond-to(sm) {
             font-size: $tiny;
           }
         }
@@ -1271,15 +1281,15 @@ button {
           margin-top: -40px;
           margin-left: -55px;
 
-          @include respond-to(lg){
+          @include respond-to(lg) {
             margin-top: 10px;
           }
 
-          @include respond-to(md){
+          @include respond-to(md) {
             margin-top: 10px;
           }
 
-          @include respond-to(sm){
+          @include respond-to(sm) {
             width: 56px;
             height: 56px;
             background-position: 23px 18px;
@@ -1302,7 +1312,7 @@ button {
         margin: 60px auto 0;
       }
 
-      @include respond-to(sm){
+      @include respond-to(sm) {
         max-width: 280px;
         margin: 30px 0 0 30px;
         height: 516px;
@@ -1327,10 +1337,12 @@ button {
         }
       }
     }
+
     .services__technology__btn {
       margin-top: -75px;
       width: 190px;
       height: 40px;
+      z-index: 10;
 
       @include respond-to(lg) {
         width: 190px;
@@ -1338,12 +1350,214 @@ button {
         margin: 60px auto 0;
       }
 
-      @include respond-to(md){
+      @include respond-to(md) {
         margin-top: 15px;
       }
     }
   }
+
+  .services__features {
+    height: 859px;
+    background-image: url(../img/eds-blog-resource-center-01-15-18-min.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    border-radius: 0 0 20px 20px;
+    padding-top: 30px;
+
+    @include respond-to(lg) {
+      height: 655px;
+      padding-top: 20px;
+    }
+
+    @include respond-to(md) {
+      padding-top: 55px;
+    }
+
+    @include respond-to(sm) {
+      padding-top: 20px;
+      height: 670px;
+      margin: 0 -15px;
+    }
+
+    .services__features__list {
+      margin-left: 80px;
+
+      @include respond-to(lg) {
+        margin-left: 0;
+      }
+
+      .services__features__item {
+        width: 770px;
+        height: 120px;
+        background-color: $turquoise;
+        margin-top: 30px;
+        border-radius: 20px;
+        display: flex;
+        align-items: center;
+
+        @include respond-to(lg) {
+          margin: 5px auto;
+        }
+
+        @include respond-to(md) {
+          width: 671px;
+        }
+
+        @include respond-to(sm) {
+          width: 280px;
+          height: auto;
+        }
+
+        &:nth-of-type(1) {
+          margin-left: 110px;
+
+          @include respond-to(lg) {
+            margin: 5px auto;
+          }
+
+          @include respond-to(sm) {
+            margin: 10px auto;
+          }
+
+
+          .services__features__item-number {
+            background-image: url(../img/1.svg);
+          }
+        }
+
+        &:nth-of-type(2) {
+          margin-left: 110px;
+
+          @include respond-to(lg) {
+            margin: 5px auto;
+          }
+
+          @include respond-to(sm) {
+            margin: 10px auto;
+          }
+
+          .services__features__item-number {
+            background-image: url(../img/2.svg);
+          }
+        }
+
+        &:nth-of-type(3) {
+          margin-left: 220px;
+
+          @include respond-to(lg) {
+            margin: 5px auto;
+          }
+
+          @include respond-to(sm) {
+            margin: 10px auto;
+          }
+
+          .services__features__item-number {
+            background-image: url(../img/3.svg);
+          }
+        }
+
+        &:nth-of-type(4) {
+          margin-left: 330px;
+
+          @include respond-to(lg) {
+            margin: 5px auto;
+          }
+
+          @include respond-to(sm) {
+            margin: 10px auto;
+          }
+
+          .services__features__item-number {
+            background-image: url(../img/4.svg);
+          }
+        }
+
+
+        .services__features__item-number {
+          display: inline-block;
+          width: 100px;
+          height: 100px;
+          border-radius: 50%;
+          margin: 10px 20px;
+          background-color: $white;
+          background-repeat: no-repeat;
+          background-position: center;
+
+          @include respond-to(sm) {
+            widows: 50px;
+            height: 50px;
+            background-size: 50%;
+          }
+        }
+
+        .services__features__item-txt {
+          text-align: start;
+          line-height: 28px;
+          width: 593px;
+          font-weight: 500;
+          font-size: $small;
+          margin-left: 10px;
+
+          @include respond-to(md) {
+            width: 488px;
+            font-size: $extrasmall;
+          }
+
+          @include respond-to(sm) {
+            font-size: $verysmal;
+            line-height: 120%;
+            padding: 5px 5px 5px 0;
+          }
+
+
+        }
+      }
+    }
+
+    .services__features__messenger {
+      margin-top: 62px;
+
+      @include respond-to(lg) {
+        margin-top: 18px;
+      }
+
+      @include respond-to(md) {
+        margin-top: 26px;
+      }
+
+      @include respond-to(sm) {
+        display: none;
+      }
+    }
+
+    .services__features__button {
+      margin-top: 30px;
+
+      @include respond-to(lg) {
+        margin-top: 20px;
+      }
+
+      @include respond-to(md) {
+        display: none;
+      }
+
+      .services__features__button-item {
+        margin: 0 15px;
+        width: 188px;
+        height: 38px;
+      }
+    }
+
+    .choice__btn {
+      color: $white;
+      background-color: $dark_blue;
+      border: none;
+    }
+  }
 }
+
 
 // modal
 .blocker {
@@ -1430,19 +1644,25 @@ button {
       .modal__btn {
         width: 334px;
         height: 40px;
-        background-color: transparent;
+        background: rgba(255, 255, 255, 0.6);
         font-size: $small;
-        background-image: url(../img/VK.svg);
-        background-repeat: no-repeat;
-        background-size: 28px 28px;
-        background-position: top 4px left 32px;
         margin-top: 60px;
 
         @include respond-to(sm) {
           width: 250px;
           font-size: $extrasmall;
-          background-position: top 4px left 14px;
           margin-top: 30px;
+        }
+      }
+
+      .participate__modal__btn {
+        background-image: url(../img/VK.svg);
+        background-repeat: no-repeat;
+        background-size: 28px 28px;
+        background-position: top 4px left 32px;
+
+        @include respond-to(sm) {
+          background-position: top 4px left 14px;
         }
       }
 
@@ -1466,4 +1686,68 @@ button {
       }
     }
   }
+}
+
+// modalVideo
+.modal__video{
+    max-width: 1284px;
+    height: 700px;
+    background-color: $light;
+    border-radius: 0;
+    position: relative;
+
+     .modal__close {
+        display: inline-block;
+        width: 38px;
+        height: 38px;
+        border-radius: 50%;
+        position: absolute;
+        background-color: $white;
+        top: 37px;
+        right: 37px;
+
+        @include respond-to(sm) {
+          left: 120px;
+        }
+
+        &::before,
+        &::after {
+          content: "";
+          position: absolute;
+          top: 18px;
+          right: 4px;
+          width: 30px;
+          height: 2px;
+          background-color: #474551;
+          z-index: 10;
+        }
+
+        &::before {
+          transform: rotate(45deg);
+        }
+
+        &::after {
+          transform: rotate(-45deg);
+        }
+      
+    }
+  
+  .modal__video__body{
+    max-width: 1024px;
+    height: 568px;
+
+    .video{
+      display: inline-block;
+      width: 100%;
+      height: 100%;
+    }
+  }
+}
+
+
+
+
+
+.map{
+ 
 }
