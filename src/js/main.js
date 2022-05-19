@@ -2,6 +2,7 @@ import $ from "jquery";
 
 import "slick-slider";
 import "jquery-modal";
+import { Fancybox } from "@fancyapps/ui";
 
 import "../scss/main.scss";
 import "../index.html";
