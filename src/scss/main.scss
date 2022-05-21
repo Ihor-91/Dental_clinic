@@ -124,6 +124,10 @@ button,
   justify-content: center;
   height: 28px;
 
+  @include respond-to(sm) {
+    display: none;
+  }
+
   .messenger__link {
     display: inline-block;
     margin-right: 9px;
@@ -1228,7 +1232,6 @@ button,
         @include respond-to(sm) {
           width: 209px;
           margin: 0 auto;
-
         }
 
         span {
@@ -1420,7 +1423,6 @@ button,
             margin: 10px auto;
           }
 
-
           .services__features__item-number {
             background-image: url(../img/1.svg);
           }
@@ -1473,7 +1475,6 @@ button,
             background-image: url(../img/4.svg);
           }
         }
-
 
         .services__features__item-number {
           display: inline-block;
@@ -1557,6 +1558,569 @@ button,
     }
   }
 }
+
+// doctors
+.doctors {
+  margin-top: 90px;
+  text-align: center;
+
+  .doctors__info {
+    display: flex;
+    justify-content: space-between;
+
+    @include respond-to(lg) {
+      justify-content: space-around;
+    }
+
+    .doctors__slider {
+      width: 630px;
+      height: 780px;
+
+      @include respond-to(lg) {
+        width: 540px;
+        margin-top: 82px;
+      }
+
+      @include respond-to(md) {
+        width: 354px;
+        margin-top: 50px;
+      }
+
+      @include respond-to(sm) {
+        display: none;
+      }
+
+      .doctors__item {
+        width: 100%;
+        height: 100px;
+        background-color: $light;
+        border-radius: 20px;
+        box-shadow: $boxShadow;
+        margin-top: 30px;
+        position: relative;
+
+        .doctor__item__images {
+          position: absolute;
+          bottom: 0;
+          left: 11px;
+
+          @include respond-to(md) {
+            display: none;
+          }
+        }
+
+        .doctors__item__txt {
+          margin-left: 190px;
+          margin-top: 23px;
+          text-align: start;
+
+          @include respond-to(md) {
+            margin-left: 27px;
+          }
+
+          .doctor__item__name {
+            font-size: $regular;
+            line-height: 29px;
+            font-weight: 500;
+
+            @include respond-to(lg) {
+              font-size: $small;
+            }
+
+            @include respond-to(md) {
+              font-size: $extrasmall;
+            }
+          }
+
+          .doctor__item__profesion {
+            font-size: $medium;
+            font-weight: 700;
+            color: $secondary;
+
+            @include respond-to(lg) {
+              font-size: $verysmal;
+            }
+
+            span {
+              color: $primary;
+              font-weight: 400;
+              font-size: $small;
+
+              @include respond-to(lg) {
+                font-size: $verysmal;
+              }
+            }
+          }
+        }
+      }
+    }
+
+    .doctors__conteiner {
+      width: 630px;
+      text-align: center;
+      margin-top: 30px;
+
+      @include respond-to(lg) {
+        width: 422px;
+      }
+
+      @include respond-to(md) {
+        width: 354px;
+      }
+
+      @include respond-to(sm) {
+        width: 300px;
+      }
+
+      .doctors__slider__big {
+        position: relative;
+
+        @include respond-to(lg) {
+          margin-top: 66px;
+        }
+
+        @include respond-to(md) {
+          margin-top: 39px;
+        }
+
+        @include respond-to(sm) {
+          margin-top: 30px;
+        }
+
+        .doctors__block {
+          width: 100%;
+          height: 750px;
+          color: $white;
+          box-shadow: $boxShadow;
+          border-radius: 20px;
+          text-align: start;
+          padding: 40px 0 0 30px;
+          position: relative;
+
+          @include respond-to(lg) {
+            padding: 20px;
+          }
+
+          .doctors__block__name {
+            font-size: $big;
+            line-height: 33px;
+            font-weight: 500;
+            color: $primary;
+
+            @include respond-to(lg) {
+              font-size: $regular;
+            }
+
+            @include respond-to(md) {
+              font-size: $extrasmall;
+            }
+          }
+
+          .doctors__block__profesion {
+            font-size: $medium;
+            font-weight: 700;
+            color: $secondary;
+            margin-top: 7px;
+
+            @include respond-to(lg) {
+              font-size: $small;
+            }
+
+            @include respond-to(md) {
+              font-size: $verysmal;
+            }
+
+            span {
+              color: $primary;
+              font-weight: 400;
+              font-size: $small;
+
+              @include respond-to(md) {
+                font-size: $verysmal;
+              }
+            }
+          }
+
+          .doctors__block__images {
+            position: absolute;
+            right: 0;
+            bottom: 0;
+
+            @include respond-to(lg) {
+              width: 250px;
+              top: 142px;
+            }
+          }
+
+          .doctors__block__experience {
+            width: 320px;
+            height: 326px;
+            background-color: rgba(243, 254, 254, 0.8);
+            backdrop-filter: blur(12px);
+            border-radius: 20px;
+            padding: 15px;
+            position: absolute;
+            bottom: 15px;
+            left: 15px;
+
+            @include respond-to(lg) {
+              width: 100%;
+              bottom: 0;
+              left: 0;
+              padding: 21px 28px 7px;
+            }
+
+            @include respond-to(md) {
+              padding: 21px 23px 7px;
+            }
+
+            @include respond-to(sm) {
+              padding: 10px 15px;
+            }
+
+            .doctors__experience__title {
+              color: $secondary;
+              font-size: $small;
+            }
+
+            .doctors__block__txt {
+              color: $primary;
+              font-size: $extrasmall;
+              margin-top: 10px;
+
+
+              span {
+                font-weight: 600;
+              }
+            }
+
+          }
+        }
+
+        .doctor__btn {
+          position: absolute;
+          left: 50%;
+          margin-left: -94px;
+          bottom: -60px;
+        }
+
+        // slick
+        .slick-arrow {
+          width: 40px;
+          height: 40px;
+          font-size: 0;
+          background-color: $white;
+          background-image: url(../img/ArrowNext.svg);
+          background-repeat: no-repeat;
+          background-position: center;
+          position: absolute;
+          top: 233px;
+          right: -20px;
+          padding: 0;
+          z-index: 10;
+          border: none;
+        }
+
+        .slick-prev {
+          background-image: url(../img/ArrowPrev.svg);
+          left: -20px;
+        }
+
+        .slick-list {
+          overflow: hidden;
+          height: 810px;
+
+          .slick-track {
+            display: flex;
+          }
+        }
+      }
+    }
+  }
+
+  // doctorsSlider
+  .slick-slider {
+
+    .slick-list {
+      overflow: hidden;
+
+      .slick-track {
+
+        .slick-slide {
+          cursor: pointer;
+
+          &.slick-current {
+
+            .doctors__item {
+              background-color: $turquoise;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .slick-dots {
+    .slick-active {
+      background-color: $blue;
+    }
+  }
+
+  .doctors__messenger {
+    margin-top: 30px;
+  }
+
+  .doctors__services {
+    margin-top: 90px;
+    text-align: start;
+
+    .doctors__services__title {
+      font-size: $extralarge;
+      font-weight: 700;
+      line-height: 45px;
+      color: $secondary;
+
+      @include respond-to(lg) {
+        font-size: $big;
+      }
+
+      @include respond-to(sm) {
+        font-size: $regular;
+      }
+
+      span {
+        color: $dark_blue;
+      }
+    }
+
+    .doctors__services__list {
+      margin-top: 45px;
+      display: flex;
+      justify-content: space-between;
+
+      @include respond-to(lg) {
+        margin: 0 auto;
+        width: 630px;
+        flex-wrap: wrap;
+      }
+
+      @include respond-to(sm) {
+        width: 300px;
+        justify-content: center;
+      }
+
+      .doctors__services__item {
+        display: block;
+        width: 190px;
+        height: 130px;
+        background-color: $light;
+        border-radius: 20px;
+        color: $secondary;
+        font-size: $regular;
+        text-align: center;
+        font-weight: 600;
+        padding-top: 10px;
+
+        @include respond-to(lg) {
+          margin-top: 98px;
+        }
+
+        @include respond-to(sm) {
+          margin-top: 60px;
+        }
+
+        &:hover {
+          background-color: $turquoise;
+
+          .doctors__services__images {
+            background-color: $light;
+          }
+        }
+
+        .doctors__services__images {
+          width: 124px;
+          height: 124px;
+          border-radius: 50%;
+          background-color: $turquoise;
+          padding-top: 15px;
+        }
+      }
+    }
+  }
+}
+
+//testimonyals
+.testimonyals {
+  margin-top: 90px;
+  text-align: center;
+
+  .testimonyals__slider {
+    margin-top: 30px;
+    position: relative;
+
+    .slick-list {
+      overflow: hidden;
+      margin: 0 -15px;
+
+      .slick-track {
+        display: flex;
+
+        .slick-slide {
+          padding: 0px 15px;
+        }
+      }
+    }
+
+    .slick-arrow {
+      width: 40px;
+      height: 40px;
+      font-size: 0;
+      background-color: $turquoise;
+      background-image: url(../img/ArrowNext.svg);
+      background-repeat: no-repeat;
+      background-position: center;
+      position: absolute;
+      top: 130px;
+      right: -20px;
+      z-index: 10;
+      border: none;
+    }
+
+    .slick-prev {
+      background-image: url(../img/ArrowPrev.svg);
+      left: -20px;
+    }
+
+    .testimonyals__slider__item {
+      height: 300px;
+      background-color: $light;
+      border-radius: 20px;
+      position: relative;
+      text-align: start;
+
+      @include respond-to(lg) {
+        height: 482px;
+      }
+
+      @include respond-to(md) {
+        height: 300px;
+      }
+
+      @include respond-to(sm) {
+        height: 410px;
+      }
+
+      img {
+        width: 160px;
+        height: 160px;
+        position: absolute;
+        top: 50%;
+        margin-top: -80px;
+        left: 30px;
+
+        @include respond-to(lg) {
+          top: 121px;
+        }
+
+        @include respond-to(md) {
+          top: 50%;
+        }
+
+        @include respond-to(sm) {
+          display: none;
+        }
+      }
+
+      .testimonyals__slider__item-text {
+        margin-left: 221px;
+        max-width: 378px;
+
+        @include respond-to(lg) {
+          max-width: 238px;
+        }
+
+        @include respond-to(md) {
+          margin-left: 221px;
+          max-width: 378px;
+          margin-top: 41px;
+        }
+
+        @include respond-to(sm) {
+          max-width: 300px;
+          margin: 30px;
+        }
+
+        .name {
+          margin-top: 21px;
+          font-size: $regular;
+          font-weight: 500;
+
+          @include respond-to(sm) {
+            margin: 0;
+          }
+        }
+
+        .text {
+          margin-top: 20px;
+        }
+
+        .data {
+          position: absolute;
+          bottom: 20px;
+          right: 20px;
+        }
+      }
+    }
+
+    .slick-dots {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      li {
+        margin: 33px 10px 0;
+
+        @include respond-to(sm) {
+          margin-top: 23px;
+        }
+
+        button {
+          width: 18px;
+          height: 18px;
+          background-color: $turquoise;
+          font-size: 0;
+          border: none;
+        }
+      }
+
+      .slick-active {
+
+        button {
+          width: 24px;
+          height: 24px;
+          background-color: $blue;
+        }
+      }
+    }
+  }
+
+  .leave__testimonyals {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: -27px;
+
+    @include respond-to(sm) {
+      margin-top: 10px;
+      justify-content: center;
+    }
+
+    p {
+      margin-right: 10px;
+    }
+  }
+}
+
+
 
 
 // modal
@@ -1666,7 +2230,6 @@ button,
         }
       }
 
-
       .modal__messenger {
         padding: 0 85px;
         margin: 30px auto 0;
@@ -1686,68 +2249,4 @@ button,
       }
     }
   }
-}
-
-// modalVideo
-.modal__video{
-    max-width: 1284px;
-    height: 700px;
-    background-color: $light;
-    border-radius: 0;
-    position: relative;
-
-     .modal__close {
-        display: inline-block;
-        width: 38px;
-        height: 38px;
-        border-radius: 50%;
-        position: absolute;
-        background-color: $white;
-        top: 37px;
-        right: 37px;
-
-        @include respond-to(sm) {
-          left: 120px;
-        }
-
-        &::before,
-        &::after {
-          content: "";
-          position: absolute;
-          top: 18px;
-          right: 4px;
-          width: 30px;
-          height: 2px;
-          background-color: #474551;
-          z-index: 10;
-        }
-
-        &::before {
-          transform: rotate(45deg);
-        }
-
-        &::after {
-          transform: rotate(-45deg);
-        }
-      
-    }
-  
-  .modal__video__body{
-    max-width: 1024px;
-    height: 568px;
-
-    .video{
-      display: inline-block;
-      width: 100%;
-      height: 100%;
-    }
-  }
-}
-
-
-
-
-
-.map{
- 
 }

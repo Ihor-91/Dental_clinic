@@ -48,4 +48,30 @@ $(".stock__slider").slick({
   ],
 });
 
-// modalVideo
+// doctors
+$(".doctors__slider").slick({
+  focusOnSelect: true,
+  slidesToShow: 6,
+  vertical: true,
+  asNavFor: ".doctors__slider__big",
+});
+
+$(".doctors__slider__big").slick({
+  fade: true,
+  speed: 500,
+  asNavFor: ".doctors__slider",
+});
+
+// testimonyals;
+$(".testimonyals__slider").slick({
+  slidesToShow: 2,
+  dots: true,
+  responsive: [
+    {
+      breakpoint: 1023,
+      settings: {
+        slidesToShow: 1,
+      },
+    },
+  ],
+});
