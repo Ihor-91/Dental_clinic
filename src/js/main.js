@@ -75,3 +75,52 @@ $(".testimonyals__slider").slick({
     },
   ],
 });
+
+// achievements__slider
+$(".achievements__slider").slick({
+  arrows: true,
+  slidesToShow: 4,
+  dots: true,
+  responsive: [
+    {
+      breakpoint: 1023,
+      settings: {
+        slidesToShow: 2,
+      },
+    },
+    {
+      breakpoint: 767,
+      settings: {
+        slidesToShow: 1,
+      },
+    },
+  ],
+});
+
+//about
+$(".about__block__slider").slick({
+  slidesToShow: 1,
+  arrows: false,
+  asNavFor: ".about__slider",
+});
+
+$(".about__slider").slick({
+  slidesToShow: 4,
+  dots: true,
+  asNavFor: ".about__block__slider",
+  focusOnSelect: true,
+  responsive: [
+    {
+      breakpoint: 1023,
+      settings: {
+        slidesToShow: 2,
+      },
+    },
+    {
+      breakpoint: 767,
+      settings: {
+        slidesToShow: 1,
+      },
+    },
+  ],
+});
