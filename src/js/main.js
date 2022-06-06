@@ -8,7 +8,6 @@ import "../scss/main.scss";
 import "../index.html";
 
 // burger
-
 function burgerMenu(selector) {
   let menu = $(selector);
   let button = menu.find(".burger");
@@ -101,6 +100,7 @@ $(".achievements__slider").slick({
 $(".about__block__slider").slick({
   slidesToShow: 1,
   arrows: false,
+  fade: true,
   asNavFor: ".about__slider",
 });
 
@@ -124,3 +124,14 @@ $(".about__slider").slick({
     },
   ],
 });
+
+// map
+function initMap() {
+  let element = document.getElementById("map");
+  let option = {
+    zoom: 5,
+    center: { lat: 53.22439, lng: 50.27921 },
+  };
+
+  let myMap = new google.maps.Map(element, option);
+}
