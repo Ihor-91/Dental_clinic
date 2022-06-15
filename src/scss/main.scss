@@ -1934,7 +1934,7 @@ button,
           background-color: $turquoise;
           margin: 0 auto;
 
-          .doctors__services__images{
+          .doctors__services__images {
             margin-top: 10px;
           }
         }
@@ -2114,11 +2114,11 @@ button,
 }
 
 //achievements
-.achievements{
+.achievements {
   text-align: center;
   margin-top: 93px;
-  
-  .achievements__slider{
+
+  .achievements__slider {
     margin-top: 30px;
     position: relative;
 
@@ -2142,27 +2142,27 @@ button,
       left: -20px;
     }
 
-    .slick-list{
+    .slick-list {
       overflow: hidden;
       margin: 0 -15px;
-      
-      .slick-track{
+
+      .slick-track {
         display: flex;
 
-        .slick-slide{
+        .slick-slide {
           padding: 0 15px;
         }
       }
     }
 
-    .achievements__images{
+    .achievements__images {
       height: auto;
       filter: drop-shadow(0px 15px 20px rgba(0, 0, 0, 0.05));
       border-radius: 20px;
       cursor: zoom-in;
     }
 
-     .slick-dots {
+    .slick-dots {
       display: flex;
       justify-content: center;
       align-items: center;
@@ -2228,7 +2228,7 @@ button,
         margin-left: 80px;
         position: relative;
 
-        &::before{
+        &::before {
           content: "";
           width: 70px;
           height: 70px;
@@ -2238,10 +2238,10 @@ button,
           position: absolute;
           top: -10px;
           left: -80px;
-          
+
         }
-        
-     
+
+
         @include respond-to(lg) {
           font-size: $verysmal;
           list-style: none;
@@ -2354,7 +2354,7 @@ button,
 }
 
 //enroll
-.enroll{
+.enroll {
   width: 100%;
   height: 500px;
   background-image: url(../img/enrollBackground.png);
@@ -2368,9 +2368,9 @@ button,
   @include respond-to(md) {
     display: flex
   }
-  
 
-  .enroll__block{
+
+  .enroll__block {
     width: 100%;
     max-width: 520px;
     height: 448px;
@@ -2379,7 +2379,7 @@ button,
     text-align: center;
     padding-top: 30px;
 
-    .enroll__text{
+    .enroll__text {
       width: 100%;
       max-width: 405px;
       color: $blue;
@@ -2388,7 +2388,7 @@ button,
       margin: 20px auto;
     }
 
-    .enroll__form{
+    .enroll__form {
       display: flex;
       flex-direction: column;
       margin: 0 auto;
@@ -2397,10 +2397,10 @@ button,
       @include respond-to(sm) {
         width: 250px;
       }
-      
-      
 
-      .enroll__form__item{
+
+
+      .enroll__form__item {
         width: 100%;
         border-radius: 30px;
         box-shadow: $boxShadow;
@@ -2410,14 +2410,14 @@ button,
         text-align: center;
         margin-bottom: 20px;
 
-        &::placeholder{
+        &::placeholder {
           color: $turquoise;
           font-weight: 600;
           font-size: $extrasmall;
         }
       }
 
-      .enroll__form__btn{
+      .enroll__form__btn {
         width: 100%;
         color: $white;
         background-color: $dark_blue;
@@ -2436,11 +2436,322 @@ button,
 }
 
 //map
-.map{
+.map {
   width: 100%;
   height: 540px;
-  background-color: aquamarine;
+
+  @include respond-to(md) {
+    margin-top: 543px;
+  }
+
+  @include respond-to(sm) {
+    display: none;
+  }
 }
+
+// FOOTER
+
+.footer {
+  height: 150px;
+  background-color: $light;
+
+  @include respond-to(xs) {
+    height: 185px;
+  }
+
+  .footer__wrapper {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 34px;
+
+    .footer__logo {
+      display: flex;
+      align-items: center;
+
+      @include respond-to(xs) {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      .footer__logo__title {
+        width: 190px;
+        font-weight: 700;
+        font-size: $small;
+        color: $secondary;
+        line-height: 120%;
+        margin-left: 19.22px;
+      }
+    }
+
+    .footer__contact {
+      max-width: 538px;
+      width: 100%;
+      height: 480px;
+      background-color: hsla(190, 91%, 38%, 0.8);
+      box-shadow: $boxShadow;
+      border-radius: 20px;
+      position: absolute;
+      bottom: 130px;
+      left: 0;
+      padding-left: 60px;
+      color: $white;
+
+      @include respond-to(lg) {
+        margin: 20px;
+      }
+
+      @include respond-to(md) {
+        bottom: 680px;
+        left: 50%;
+        margin-left: -33.3%;
+      }
+
+      @include respond-to(sm) {
+        display: none;
+      }
+
+      .contact__title {
+        color: $white;
+        margin-top: 30px;
+        font-size: $huge;
+      }
+
+      .contact__address {
+        max-width: 338px;
+        font-size: $regular;
+        line-height: 29px;
+        margin-top: 20px;
+        font-weight: 500;
+      }
+
+      .contact__route {
+        margin-top: 10px;
+        color: $dark_blue;
+        font-size: $extrasmall;
+        font-weight: 700;
+        line-height: 140%;
+        display: block;
+        position: relative;
+        cursor: pointer;
+
+        &:hover {
+          opacity: 0.75;
+        }
+
+        .contact__route__img {
+          position: absolute;
+          left: 177px;
+          bottom: 2px;
+        }
+      }
+
+      .contact__clock {
+        margin-top: 10px;
+        font-size: $extrasmall;
+        font-weight: 500;
+      }
+
+      .contact__clock-last {
+        font-size: $tiny;
+        line-height: 17px;
+        margin-bottom: 20px;
+      }
+
+      .contact__phones {
+        display: flex;
+        flex-direction: column;
+        font-size: $regular;
+        font-weight: 600;
+        line-height: 140%;
+
+        &:hover {
+          opacity: 0.75;
+        }
+      }
+
+      .contact__messenger {
+        justify-content: flex-start;
+        margin-top: 15px;
+
+        .link__whatsapp {
+          &:hover {
+            opacity: 0.75;
+          }
+        }
+
+        .link__telegram {
+          &:hover {
+            opacity: 0.75;
+          }
+        }
+      }
+
+      .contact__vk {
+        margin-top: 20px;
+        font-size: $extrasmall;
+        font-weight: 600;
+        line-height: 140%;
+
+        &:hover {
+          opacity: 0.75;
+        }
+
+        .contact__vk__link {
+          display: flex;
+          align-items: center;
+
+          img {
+            margin-right: 10px;
+          }
+        }
+      }
+
+    }
+
+    .footer__nav {
+
+      .footer__menu {
+        display: flex;
+        align-items: center;
+
+        .footer__burger {
+          display: none;
+          z-index: 100;
+
+          @include respond-to(lg) {
+            display: block;
+            width: 60px;
+            height: 60px;
+            border: none;
+            border-radius: 20px;
+            padding: 10px;
+            position: relative;
+
+            &::before,
+            &::after {
+              content: "";
+              height: 6px;
+              background-color: $secondary;
+              border-radius: 6px;
+              position: absolute;
+            }
+
+            &::before {
+              width: 40px;
+              top: 15px;
+              left: 10px;
+
+            }
+
+            &::after {
+              width: 33px;
+              bottom: 15px;
+              left: 10px;
+            }
+          }
+
+          i {
+            display: block;
+            width: 40px;
+            height: 6px;
+            border-radius: 6px;
+            background-color: $secondary;
+          }
+        }
+
+
+
+        .footer__list {
+          display: flex;
+          align-items: center;
+          margin-top: -20px;
+
+          @include respond-to(lg) {
+            display: none;
+          }
+
+          .footer__item {
+            margin-left: 30px;
+
+            .footer__link {
+              color: $secondary;
+              font-size: $extrasmall;
+              font-weight: 500;
+              line-height: 22px;
+
+              &:hover {
+                opacity: 0.7;
+              }
+            }
+          }
+        }
+      }
+
+      .footerMenu-visible {
+
+        .footer__burger {
+
+          &::before,
+          &::after {
+            width: 40px;
+            top: 27px;
+          }
+
+          &::before {
+            transform: rotate(45deg);
+          }
+
+          &::after {
+            transform: rotate(-45deg);
+          }
+
+          i {
+            display: none;
+          }
+        }
+
+        .footer__list {
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          background-color: $primary;
+          position: absolute;
+          bottom: -20px;
+          right: 0;
+          width: 300px;
+          height: 700px;
+          padding-bottom: 60px;
+          transition: all 0.5s ease 0s;
+          z-index: 5;
+
+          @include respond-to(sm) {
+            width: 100%;
+            height: 655px;
+
+          }
+
+          .footer__item {
+            margin: 40px auto 0;
+
+            .footer__link {
+              font-weight: 500;
+              font-size: $extrasmall;
+              line-height: 22px;
+              color: $secondary;
+
+              &:hover {
+                opacity: 0.7;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
 
 .modal {
   background-color: rgba(0, 0, 0, 0.7);

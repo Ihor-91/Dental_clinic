@@ -130,7 +130,7 @@ $(".about__slider").slick({
 function initMap() {
   let uluru = { lat: 55.1076233320669, lng: 38.74410715096147 };
   let myMap = new google.maps.Map(document.getElementById("map"), {
-    zoom: 15,
+    zoom: 11,
     center: uluru,
   });
 
@@ -141,3 +141,23 @@ function initMap() {
 }
 
 window.initMap = initMap;
+
+// footerBurger
+function footerBurgerMenu(selector) {
+  let menu = $(selector);
+  let button = menu.find(".footer__burger");
+  let links = menu.find(".footer__link");
+
+  button.on("click", (e) => {
+    e.preventDefault();
+    toggleMenu();
+  });
+
+  links.on("click", () => toggleMenu());
+
+  function toggleMenu() {
+    menu.toggleClass("footerMenu-visible");
+  }
+}
+
+footerBurgerMenu(".footer__menu");
