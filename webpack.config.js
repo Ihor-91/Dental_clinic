@@ -6,6 +6,7 @@ const CopyWebpackPlugin = require("copy-webpack-plugin");
 const OptimizeCssAssetWebpackPlugin = require("optimize-css-assets-webpack-plugin");
 const TerserWebpackPlugin = require("terser-webpack-plugin");
 const autoprefixer = require("autoprefixer");
+const FaviconsWebpackPlugin = require("favicons-webpack-plugin");
 
 const isDev = process.env.NODE_ENV === "development";
 const isProd = !isDev;
@@ -39,6 +40,13 @@ const plugins = () => {
         collapseWhitespace: isProd,
       },
     }),
+    new HTMLWebpackPlugin({
+      template: path.resolve(__dirname, "src/doctor1.html"),
+      filename: "doctor1.html",
+      minify: {
+        collapseWhitespace: isProd,
+      },
+    }),
     new CleanWebpackPlugin(),
     new MiniCssExtractPlugin({
       filename: `./css/${filename("css")}`,
@@ -51,6 +59,23 @@ const plugins = () => {
         },
       ],
     }),
+    // new FaviconsWebpackPlugin({
+    //   logo: "./src/img/logo.png", // svg works too!
+    //   mode: "webapp", // optional can be 'webapp', 'light' or 'auto' - 'auto' by default
+    //   devMode: "webapp", // optional can be 'webapp' or 'light' - 'light' by default
+    //   favicons: {
+    //     appName: "my-app",
+    //     appDescription: "My awesome App",
+    //     developerName: "Me",
+    //     developerURL: null, // prevent retrieving from the nearest package.json
+    //     background: "#ddd",
+    //     theme_color: "#333",
+    //     icons: {
+    //       coast: false,
+    //       yandex: false,
+    //     },
+    //   },
+    // }),
   ];
 
   return basePlugins;
