@@ -59,23 +59,18 @@ const plugins = () => {
         },
       ],
     }),
-    // new FaviconsWebpackPlugin({
-    //   logo: "./src/img/logo.png", // svg works too!
-    //   mode: "webapp", // optional can be 'webapp', 'light' or 'auto' - 'auto' by default
-    //   devMode: "webapp", // optional can be 'webapp' or 'light' - 'light' by default
-    //   favicons: {
-    //     appName: "my-app",
-    //     appDescription: "My awesome App",
-    //     developerName: "Me",
-    //     developerURL: null, // prevent retrieving from the nearest package.json
-    //     background: "#ddd",
-    //     theme_color: "#333",
-    //     icons: {
-    //       coast: false,
-    //       yandex: false,
-    //     },
-    //   },
-    // }),
+    new FaviconsWebpackPlugin({
+      logo: "./assets/favicons/android-chrome-512x512.png",
+      mode: "webapp",
+      devMode: "webapp",
+      favicons: {
+        appName: "Dental clinic",
+        appDescription: "Dental clinic is the best place for your health",
+        developerName: "Ihor",
+        background: "#ffffff",
+        theme_color: "#ffffff",
+      },
+    }),
   ];
 
   return basePlugins;

@@ -1,7 +1,7 @@
 {
-  "name": "firstwebpack",
+  "name": "Dental clinic",
   "version": "1.0.0",
-  "description": "simple webpack",
+  "description": "Dental clinic is the best place for your health",
   "main": "index.js",
   "author": "Ihor",
   "license": "ISC",
@@ -18,7 +18,7 @@
     "copy-webpack-plugin": "^10.2.4",
     "cross-env": "^7.0.3",
     "css-loader": "^6.7.1",
-    "favicons": "^7.0.0-beta.4",
+    "favicons": "^6.2.2",
     "favicons-webpack-plugin": "^5.0.2",
     "html-loader": "^3.1.0",
     "html-webpack-plugin": "^5.5.0",
