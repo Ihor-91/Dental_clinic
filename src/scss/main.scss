@@ -2429,88 +2429,57 @@ button,
 }
 
 
-
 // modal
 .blocker {
   z-index: 100;
 }
 
 //map
-.map {
-  width: 100%;
+.contacts {
   height: 540px;
 
   @include respond-to(md) {
-    margin-top: 543px;
+    height: 1103px;
   }
 
   @include respond-to(sm) {
-    display: none;
-  }
-}
-
-// FOOTER
-
-.footer {
-  height: 150px;
-  background-color: $light;
-
-  @include respond-to(xs) {
-    height: 185px;
+    height: 540px;
   }
 
-  .footer__wrapper {
-    position: relative;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding-top: 34px;
+  .wrapper__contacts {
 
-    .footer__logo {
+    @include respond-to(md) {
       display: flex;
-      align-items: center;
+      justify-content: center;
+    }
 
-      @include respond-to(xs) {
-        flex-direction: column;
-        align-items: flex-start;
+    .map {
+      width: 100%;
+      height: 540px;
+      position: absolute;
+      left: 0px;
+
+      @include respond-to(md) {
+        height: 560px;
+        margin-top: 543px;
       }
 
-      .footer__logo__title {
-        width: 190px;
-        font-weight: 700;
-        font-size: $small;
-        color: $secondary;
-        line-height: 120%;
-        margin-left: 19.22px;
+      @include respond-to(sm) {
+        display: none;
       }
     }
 
-    .footer__contact {
+    .contact {
       max-width: 538px;
       width: 100%;
       height: 480px;
       background-color: hsla(190, 91%, 38%, 0.8);
       box-shadow: $boxShadow;
       border-radius: 20px;
-      position: absolute;
-      bottom: 130px;
-      left: 0;
       padding-left: 60px;
       color: $white;
-
-      @include respond-to(lg) {
-        margin: 20px;
-      }
-
-      @include respond-to(md) {
-        bottom: 680px;
-        left: 50%;
-        margin-left: -33.3%;
-      }
-
-      @include respond-to(sm) {
-        display: none;
-      }
+      position: absolute;
+      margin-top: 30px;
 
       .contact__title {
         color: $white;
@@ -2607,8 +2576,47 @@ button,
           }
         }
       }
-
     }
+  }
+}
+
+
+// FOOTER
+
+.footer {
+  height: 150px;
+  background-color: $light;
+
+  @include respond-to(xs) {
+    height: 185px;
+  }
+
+  .footer__wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 34px;
+
+    .footer__logo {
+      display: flex;
+      align-items: center;
+
+      @include respond-to(xs) {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      .footer__logo__title {
+        width: 190px;
+        font-weight: 700;
+        font-size: $small;
+        color: $secondary;
+        line-height: 120%;
+        margin-left: 19.22px;
+      }
+    }
+
+
 
     .footer__nav {
 
@@ -2870,6 +2878,207 @@ button,
             font-size: $tiny;
             margin-left: 0;
           }
+        }
+      }
+    }
+  }
+}
+
+//page 2
+.page__two {
+  background-color: $light;
+
+  .pages__two__title {
+    font-size: $extralarge;
+    line-height: 140%;
+    padding: 90px 0;
+    max-width: 1180px;
+
+    strong {
+      font-weight: 700;
+    }
+
+    span {
+      color: $blue;
+    }
+  }
+
+  .block {
+    display: flex;
+    justify-content: space-between;
+
+    .doctors__block {
+      width: 100%;
+      max-width: 630px;
+      height: 750px;
+      color: $white;
+      box-shadow: $boxShadow;
+      border-radius: 20px;
+      text-align: start;
+      padding: 40px 0 0 30px;
+      background-color: $white;
+      position: relative;
+
+      @include respond-to(lg) {
+        padding: 20px;
+      }
+
+      .doctors__block__name {
+        font-size: $big;
+        line-height: 33px;
+        font-weight: 500;
+        color: $primary;
+
+        @include respond-to(lg) {
+          font-size: $regular;
+        }
+
+        @include respond-to(md) {
+          font-size: $extrasmall;
+        }
+      }
+
+      .doctors__block__profesion {
+        font-size: $medium;
+        font-weight: 700;
+        color: $secondary;
+        margin-top: 7px;
+
+        @include respond-to(lg) {
+          font-size: $small;
+        }
+
+        @include respond-to(md) {
+          font-size: $verysmal;
+        }
+
+        span {
+          color: $primary;
+          font-weight: 400;
+          font-size: $small;
+
+          @include respond-to(md) {
+            font-size: $verysmal;
+          }
+        }
+      }
+
+      .doctors__block__images {
+        position: absolute;
+        right: 0;
+        bottom: 0;
+
+        @include respond-to(lg) {
+          width: 250px;
+          top: 142px;
+        }
+      }
+
+      .doctors__block__experience {
+        width: 320px;
+        height: 326px;
+        background-color: rgba(243, 254, 254, 0.8);
+        backdrop-filter: blur(12px);
+        border-radius: 20px;
+        padding: 15px;
+        position: absolute;
+        bottom: 15px;
+        left: 15px;
+
+        @include respond-to(lg) {
+          width: 100%;
+          bottom: 0;
+          left: 0;
+          padding: 21px 28px 7px;
+        }
+
+        @include respond-to(md) {
+          padding: 21px 23px 7px;
+        }
+
+        @include respond-to(sm) {
+          padding: 10px 15px;
+        }
+
+        .doctors__experience__title {
+          color: $secondary;
+          font-size: $small;
+        }
+
+        .doctors__block__txt {
+          color: $primary;
+          font-size: $extrasmall;
+          margin-top: 10px;
+
+
+          span {
+            font-weight: 600;
+          }
+        }
+
+      }
+    }
+
+    .col {
+      width: 100%;
+      max-width: 630px;
+      .text {
+        font-size: $big;
+        margin: 31px 0 85px;
+
+        span{
+          color: $blue;
+        }
+      }
+
+      .form {
+        width: 100%;
+        max-width: 630px;
+        height: 332px;
+        background-color: $white;
+        margin-top: 33px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        box-shadow: 0px 15px 20px rgba(0, 0, 0, 0.05);
+        border-radius: 20px;
+
+        .form__title{
+          max-width: 400px;
+          font-size: $regular;
+          color: $secondary;
+          text-align: center;
+          margin: 35px 0 25px;
+        }
+
+        .input{
+          width: 100%;
+          max-width: 300px;
+          height: 40px;
+          box-shadow: 0px 15px 20px rgba(0, 0, 0, 0.05);
+          border-radius: 30px;
+          border: 2px solid $turquoise;
+          margin-bottom: 20px;
+
+          &::placeholder{
+            color: $turquoise;
+            font-size: $extrasmall;
+            font-weight: 600;
+            line-height: 22px;
+            text-align: center;
+          }
+        }
+
+        .form__btn{
+          background-color: $dark_blue;
+          width: 100%;
+          max-width: 300px;
+          height: 40px;
+          box-shadow: 0px 15px 20px rgba(0, 0, 0, 0.05);
+          border-radius: 30px;
+          margin-bottom: 20px;
+          border: none;
+          color: $white;
         }
       }
     }
