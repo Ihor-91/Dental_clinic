@@ -1686,6 +1686,7 @@ button,
           text-align: start;
           padding: 40px 0 0 30px;
           position: relative;
+          cursor: auto;
 
           @include respond-to(lg) {
             padding: 20px;
@@ -1752,7 +1753,9 @@ button,
             position: absolute;
             bottom: 15px;
             left: 15px;
+            border: 1px solid $turquoise;
 
+            
             @include respond-to(lg) {
               width: 100%;
               bottom: 0;
@@ -1807,13 +1810,21 @@ button,
           top: 233px;
           right: -20px;
           padding: 0;
-          z-index: 10;
+          z-index: 100;
           border: none;
+
+          @include respond-to(sm){
+            right: 0;
+          }
         }
 
         .slick-prev {
           background-image: url(../img/ArrowPrev.svg);
           left: -20px;
+
+          @include respond-to(sm){
+            left: 0;
+          }
         }
 
         .slick-list {
@@ -2586,6 +2597,7 @@ button,
 .footer {
   height: 150px;
   background-color: $light;
+  position: relative;
 
   @include respond-to(xs) {
     height: 185px;
@@ -2698,6 +2710,7 @@ button,
       }
 
       .footerMenu-visible {
+        
 
         .footer__burger {
 
@@ -2726,7 +2739,7 @@ button,
           justify-content: center;
           background-color: $primary;
           position: absolute;
-          bottom: -20px;
+          bottom: 0;
           right: 0;
           width: 300px;
           height: 700px;
@@ -2894,6 +2907,20 @@ button,
     padding: 90px 0;
     max-width: 1180px;
 
+    @include respond-to(lg){
+      padding: 31px 0 74px;
+      font-size: $big;
+    }
+    
+    @include respond-to(md){
+      padding: 30px 0 77px;
+    }
+
+    @include respond-to(sm){
+      padding: 20px;
+      font-size: $extrasmall;
+    }
+
     strong {
       font-weight: 700;
     }
@@ -2906,6 +2933,11 @@ button,
   .block {
     display: flex;
     justify-content: space-between;
+
+    @include respond-to(sm){
+      flex-direction: column;
+      align-items: center;
+    }
 
     .doctors__block {
       width: 100%;
@@ -2921,6 +2953,11 @@ button,
 
       @include respond-to(lg) {
         padding: 20px;
+        max-width: 422px;
+      }
+
+      @include respond-to(md){
+        max-width: 354px;
       }
 
       .doctors__block__name {
@@ -2984,6 +3021,7 @@ button,
         position: absolute;
         bottom: 15px;
         left: 15px;
+        border: 1px solid $turquoise;
 
         @include respond-to(lg) {
           width: 100%;
@@ -3010,6 +3048,10 @@ button,
           font-size: $extrasmall;
           margin-top: 10px;
 
+          @include respond-to(sm){
+            font-size: $verysmal;
+          }
+
 
           span {
             font-weight: 600;
@@ -3022,9 +3064,32 @@ button,
     .col {
       width: 100%;
       max-width: 630px;
+
+      @include respond-to(lg){
+        max-width: 482px;
+      }
+
+      @include respond-to(md){
+        max-width: 354px;
+      }
       .text {
         font-size: $big;
         margin: 31px 0 85px;
+
+        @include respond-to(lg){
+          font-size: $medium;
+          margin: 0 0 48px;
+        }
+
+        @include respond-to(md){
+          margin-bottom: 80px;
+        }
+
+        @include respond-to(sm){
+          font-size: $small;
+          margin: 40px 0 20px;
+        }
+
 
         span{
           color: $blue;
@@ -3049,6 +3114,10 @@ button,
           color: $secondary;
           text-align: center;
           margin: 35px 0 25px;
+
+          @include respond-to(md){
+            font-size: 20px;
+          }
         }
 
         .input{

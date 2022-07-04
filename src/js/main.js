@@ -146,7 +146,6 @@ window.initMap = initMap;
 function footerBurgerMenu(selector) {
   let menu = $(selector);
   let button = menu.find(".footer__burger");
-  let links = menu.find(".footer__link");
 
   button.on("click", (e) => {
     e.preventDefault();
