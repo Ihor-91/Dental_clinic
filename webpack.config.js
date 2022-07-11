@@ -47,6 +47,41 @@ const plugins = () => {
         collapseWhitespace: isProd,
       },
     }),
+    new HTMLWebpackPlugin({
+      template: path.resolve(__dirname, "src/doctor2.html"),
+      filename: "doctor2.html",
+      minify: {
+        collapseWhitespace: isProd,
+      },
+    }),
+    new HTMLWebpackPlugin({
+      template: path.resolve(__dirname, "src/doctor3.html"),
+      filename: "doctor3.html",
+      minify: {
+        collapseWhitespace: isProd,
+      },
+    }),
+    new HTMLWebpackPlugin({
+      template: path.resolve(__dirname, "src/doctor4.html"),
+      filename: "doctor4.html",
+      minify: {
+        collapseWhitespace: isProd,
+      },
+    }),
+    new HTMLWebpackPlugin({
+      template: path.resolve(__dirname, "src/doctor5.html"),
+      filename: "doctor5.html",
+      minify: {
+        collapseWhitespace: isProd,
+      },
+    }),
+    new HTMLWebpackPlugin({
+      template: path.resolve(__dirname, "src/doctor6.html"),
+      filename: "doctor6.html",
+      minify: {
+        collapseWhitespace: isProd,
+      },
+    }),
     new CleanWebpackPlugin(),
     new MiniCssExtractPlugin({
       filename: `./css/${filename("css")}`,
